@@ -1,13 +1,11 @@
 import React from "react";
+import DropSection from "./DropSection";
 
 const Body = () => {
   return (
     <div className="main">
       <div className="body">
-        <div className="drop-section">
-          <img src="./file-image.png" alt="file-image" draggable="false" />
-          <p>Click here to drop</p>
-        </div>
+        <DropSection />
       </div>
       <div className="img-wrapper">
         <img src="./home-img.png" />
