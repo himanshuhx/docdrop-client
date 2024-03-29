@@ -1,8 +1,11 @@
 import axios from "axios";
 
-const uploadFile = async (data) => {
-  console.log(process.env.REACT_APP_SERVER_URL);
+export const uploadFile = async (data) => {
   return await axios.post(`${process.env.REACT_APP_SERVER_URL}/upload`, data);
 };
 
-export default uploadFile;
+export const downloadFile = async (fileId) => {
+  return await axios.get(
+    `${process.env.REACT_APP_SERVER_URL}/download/${fileId}`
+  );
+};

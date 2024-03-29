@@ -31,14 +31,14 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  width: 500px;
+  width: 700px;
   height: 300px;
   border-radius: 20px;
   box-shadow: 0px 20px 20px 0px #00000017;
 }
 
 .drop-section {
-  width: 400px;
+  width: 600px;
   height: 200px;
   display: flex;
   padding: 20px;
@@ -50,6 +50,12 @@ body {
   color: #5f1607;
 }
 
+.drop-section > h5 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
 .uploadBtn {
   background-color: #faa283;
   border: none;
@@ -58,16 +64,90 @@ body {
   color: white;
   font-size: larger;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .uploadBtn:hover {
-  background-color: #cfab95;
+  background-color: black;
 }
 
 .drop-section > img {
   width: 100px;
   height: 100px;
+}
+
+.download-link-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-link-section > h4 {
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fcf5ef;
+  font-weight: 500;
+}
+
+.copyBtn {
+  height: 60px;
+  width: 50px;
+  margin-left: 10px;
+  color: white;
+  background-color: #faa283;
+  font-size: larger;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.copyBtn:hover {
+  background-color: black;
+}
+
+.download-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 70vh;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  color: #5f1607;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 20px 0px #00000017;
+}
+
+.download-section > button {
+  height: 5vh;
+  width: 20vw;
+  margin-left: 10px;
+  color: white;
+  background-color: #faa283;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.download-section > img {
+  width: 15vh;
+  height: 15vh;
+}
+
+.download-section > p {
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
 }
