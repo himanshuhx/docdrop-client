@@ -6,6 +6,7 @@ export const uploadFile = async (data) => {
 
 export const downloadFile = async (fileId) => {
   return await axios.get(
-    `${process.env.REACT_APP_SERVER_URL}/download/${fileId}`
+    `${process.env.REACT_APP_SERVER_URL}/download/${fileId}`,
+    { responseType: "blob" }
   );
 };

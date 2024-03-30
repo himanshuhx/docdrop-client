@@ -9,7 +9,21 @@ const DownloadSection = () => {
 
   const startDownload = async () => {
     try {
-      return await downloadFile(fileId);
+      const response = await downloadFile(fileId);
+      const blob = new Blob([response.data], {
+        type: response.headers["content-type"],
+      });
+      // Create a URL for the blob
+      const url = window.URL.createObjectURL(blob);
+      // Create a temporary anchor element to trigger the download
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", `${response.headers["file-name"]}`); // Set filename for the download
+      document.body.appendChild(link);
+      link.click();
+      // Cleanup
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(link);
     } catch (err) {
       toast.error(err.message);
     }

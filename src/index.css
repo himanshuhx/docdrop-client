@@ -115,9 +115,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 50vh;
-  width: 70vh;
+  width: 50vh;
   background-color: #fff;
-  padding: 20px;
   border-radius: 20px;
   color: #5f1607;
   display: flex;
@@ -129,7 +128,7 @@ body {
 
 .download-section > button {
   height: 5vh;
-  width: 20vw;
+  width: 20vh;
   margin-left: 10px;
   color: white;
   background-color: #faa283;
@@ -142,8 +141,8 @@ body {
 }
 
 .download-section > img {
-  width: 15vh;
-  height: 15vh;
+  width: 10vh;
+  height: 10vh;
 }
 
 .download-section > p {
