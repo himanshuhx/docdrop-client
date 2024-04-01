@@ -34,7 +34,9 @@ const DropSection = () => {
         const formData = new FormData();
         formData.append("fileName", file.name);
         formData.append("file", file);
-        console.log(file.size);
+        if (file.size > 1000000) {
+          toast.error("Sorry We dont Support huge file size for Now");
+        }
         const apiResponse = await uploadFile(formData);
         const fileId = apiResponse.data;
         if (fileId) {
