@@ -7,9 +7,7 @@ const Body = () => {
       <div className="body">
         <DropSection />
       </div>
-      <div className="img-wrapper">
-        <img src="./home-img.png" />
-      </div>
+      <img src="./home-img.png" />
     </div>
   );
 };

@@ -40,9 +40,7 @@ const DropSection = () => {
         const apiResponse = await uploadFile(formData);
         const fileId = apiResponse.data;
         if (fileId) {
-          setDownloadPageUrl(
-            `${process.env.REACT_APP_CLIENT_URL}/download/${fileId}`
-          );
+          setDownloadPageUrl(`${window.location}download/${fileId}`);
           setIsDownloadLinkGenerated(true);
           toast("Download Link Generated, Happy Sharing!", {
             icon: "🥳",
@@ -73,7 +71,7 @@ const DropSection = () => {
 
       {isDownloadLinkGenerated && (
         <div className="download-link-section">
-          <h4>{downloadPageUrl}</h4>
+          <input value={downloadPageUrl}></input>
           <button className="copyBtn" onClick={copyDownloadLink}>
             <FontAwesomeIcon icon={faCopy} />
           </button>

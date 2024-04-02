@@ -31,8 +31,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  width: 700px;
-  height: 300px;
   border-radius: 20px;
   box-shadow: 0px 20px 20px 0px #00000017;
 }
@@ -42,6 +40,7 @@ body {
   height: 200px;
   display: flex;
   padding: 20px;
+  margin: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -53,7 +52,7 @@ body {
 .drop-section > h5 {
   margin-top: 2px;
   margin-bottom: 2px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .uploadBtn {
@@ -85,12 +84,14 @@ body {
   align-items: center;
 }
 
-.download-link-section > h4 {
+.download-link-section > input {
   margin-right: 10px;
-  padding: 20px;
+  width: 350px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #fcf5ef;
   font-weight: 500;
+  border: none;
 }
 
 .copyBtn {
@@ -149,4 +150,53 @@ body {
   padding: 10px;
   font-size: larger;
   font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  .main > img {
+    width: 20vh;
+    height: 20vh;
+  }
+
+  .drop-section {
+    width: 30vh;
+    height: 50vh;
+  }
+
+  .drop-section > p {
+    font-weight: 800;
+    font-size: smaller;
+    text-align: center;
+  }
+
+  .drop-section > h5 {
+    font-size: smaller;
+    text-align: center;
+  }
+
+  .download-link-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .download-link-section > input {
+    height: 2vh;
+    width: 28vh;
+  }
+
+  .copyBtn {
+    height: 5vh;
+    width: 30vh;
+    margin: 10px;
+  }
 }
